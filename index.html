@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" data-translate="nav.logo">Wellness Center</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-translate="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav.about">Bhakti Marga</a></li>
+                <li><a href="#satguru" class="nav-link" data-translate="nav.satguru">Satguru</a></li>
+                <li><a href="#bio" class="nav-link" data-translate="nav.bio">Bio</a></li>
+                <li><a href="#practices" class="nav-link" data-translate="nav.practices">Practices</a></li>
+                <li><a href="#book-now" class="nav-link" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <div class="custom-dropdown" id="language-dropdown">
+                    <div class="dropdown-selected" id="dropdown-selected">
+                        <span class="flag">🇺🇸</span>
+                        <span class="lang-name">English</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </div>
+                    <div class="dropdown-options" id="dropdown-options">
+                        <div class="dropdown-option" data-lang="en" data-flag="🇺🇸">
+                            <span class="flag">🇺🇸</span>
+                            <span class="lang-name">English</span>
+                        </div>
+                        <div class="dropdown-option" data-lang="pt" data-flag="🇧🇷">
+                            <span class="flag">🇧🇷</span>
+                            <span class="lang-name">Português</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in" data-translate="home.heroTitle">Welcome to Wellness Center</h1>
+                <p class="fade-in-delay" data-translate="home.heroSubtitle">Your journey to wellness begins here</p>
+                <a href="#book-now" class="btn-primary slide-up" data-translate="home.getStarted">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/placeholder.png" alt="Wellness" class="fade-in-image">
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3 data-translate="home.feature1Title">Holistic Approach</h3>
+                <p data-translate="home.feature1Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3 data-translate="home.feature2Title">Natural Methods</h3>
+                <p data-translate="home.feature2Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💚</div>
+                <h3 data-translate="home.feature3Title">Expert Care</h3>
+                <p data-translate="home.feature3Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bhakti Marga Page -->
+    <section id="about" class="page">
+        <div class="page-container">
+            <h2 class="page-title" data-translate="about.title">Bhakti Marga</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/placeholder.png" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <h3 data-translate="about.storyTitle">Our Story</h3>
+                    <p data-translate="about.story1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p data-translate="about.story2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p data-translate="about.story3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+            <div class="values">
+                <h3 data-translate="about.valuesTitle">Our Values</h3>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4 data-translate="about.value1Title">Compassion</h4>
+                        <p data-translate="about.value1Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4 data-translate="about.value2Title">Excellence</h4>
+                        <p data-translate="about.value2Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4 data-translate="about.value3Title">Integrity</h4>
+                        <p data-translate="about.value3Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4 data-translate="about.value4Title">Innovation</h4>
+                        <p data-translate="about.value4Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satguru Page -->
+    <section id="satguru" class="page">
+        <div class="page-container">
+            <h2 class="page-title" data-translate="satguru.title">Satguru</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/placeholder.png" alt="Satguru">
+                </div>
+                <div class="about-text">
+                    <h3 data-translate="satguru.subtitle">Paramahamsa Vishwananda</h3>
+                    <p data-translate="satguru.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p data-translate="satguru.text2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p data-translate="satguru.text3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Page -->
+    <section id="bio" class="page">
+        <div class="page-container">
+            <h2 class="page-title" data-translate="bio.title">Bio</h2>
+            <div class="bio-content">
+                <div class="bio-image">
+                    <img src="img/ddd.jpg" alt="Bio">
+                </div>
+                <div class="bio-text">
+                    <h3 data-translate="bio.name">Dhanurdhara Das Ananda</h3>
+                    <p class="bio-title" data-translate="bio.titleText">Teacher of Spiritual Knowledge, Rituals & Atma Kriya Yoga</p>
+                    <p data-translate="bio.text1">Born in July 1994, Dhanurdhara Das Ananda grew up in a religious family, yet he never considered himself a religious person. As a young man, after achieving many of the things he desired, he began to feel an inner emptiness he couldn't explain or fill.</p>
+                    <p data-translate="bio.text2">With his long-standing interest in history, politics, and philosophy, he turned his attention toward self-knowledge, God, and the depth of Hindu culture.</p>
+                    <p data-translate="bio.text3">In January 2017, he met Paramahamsa Vishwananda in São Paulo, where he experienced something profound and transformative — an encounter he later understood as a call from his soul to his Satguru.</p>
+                    <p data-translate="bio.text4">In Florianópolis, where he lived, Paramahamsa Vishwananda inaugurated a temple located just ten minutes from his home, which Dhanurdhara began to attend regularly. A year later, he traveled to Germany to Shree Peetha Nilaya, where he dedicated himself to seva (selfless service) and a deeper study of Bhakti Marga and Hinduism.</p>
+                    <h4 data-translate="bio.educationTitle">Education & Certifications</h4>
+                    <ul class="bio-list">
+                        <li data-translate="bio.education1">Training in Bhakti Yoga and Vedic Philosophy, Bhakti Marga Academy</li>
+                        <li data-translate="bio.education2">Certified Atma Kriya Yoga Teacher</li>
+                        <li data-translate="bio.education3">Training in Vedic Rituals and Spiritual Ceremonies</li>
+                        <li data-translate="bio.education4">Ongoing studies under the guidance of Paramahamsa Vishwananda</li>
+                    </ul>
+                    <h4 data-translate="bio.experienceTitle">Experience</h4>
+                    <p data-translate="bio.experienceText">With over seven years dedicated to the Bhakti path, Dhanurdhara Das Ananda serves as a teacher and facilitator of spiritual practices, offering classes and talks on Vedic knowledge, rituals, and Atma Kriya Yoga. His work inspires spiritual seekers to cultivate a deeper relationship with the Divine, integrating ancient wisdom with daily devotion and self-discovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practices Page -->
+    <section id="practices" class="page">
+        <div class="page-container">
+            <h2 class="page-title" data-translate="practices.title">Our Practices</h2>
+            <div class="practices-grid">
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 1">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice1Title">Acupuncture</h3>
+                        <p data-translate="practices.practice1Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 2">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice2Title">Yoga Therapy</h3>
+                        <p data-translate="practices.practice2Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 3">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice3Title">Reiki Healing</h3>
+                        <p data-translate="practices.practice3Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 4">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice4Title">Meditation</h3>
+                        <p data-translate="practices.practice4Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 5">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice5Title">Herbal Medicine</h3>
+                        <p data-translate="practices.practice5Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+                <div class="practice-card">
+                    <img src="img/placeholder.png" alt="Practice 6">
+                    <div class="practice-content">
+                        <h3 data-translate="practices.practice6Title">Nutrition Counseling</h3>
+                        <p data-translate="practices.practice6Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#book-now" class="practice-link" data-translate="practices.learnMore">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="book-now" class="page">
+        <div class="page-container">
+            <h2 class="page-title" data-translate="booking.title">Contact</h2>
+            <div class="booking-content">
+                <div class="booking-image">
+                    <img src="img/placeholder.png" alt="Booking">
+                </div>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="name" data-translate="booking.nameLabel">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="booking.emailLabel">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-translate="booking.phoneLabel">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" data-translate="booking.dateLabel">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" data-translate="booking.timeLabel">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="booking.messageLabel">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" data-translate="booking.submitButton">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 <span data-translate="footer.text">Wellness Center. All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
