@@ -60,9 +60,9 @@ const translations = {
         satguru: {
             title: 'Satguru',
             subtitle: 'Paramahamsa Vishwananda',
-            text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            text2: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            text3: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+            text1: 'Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with a formative encounter with Mahavatar Babaji in childhood—a relationship he describes as the guiding thread of his mission.',
+            text2: 'After traveling and giving darshan in Europe in the late 1990s, he formally established Bhakti Marga on 13 June 2005. The movement\'s international headquarters is Shree Peetha Nilaya in Heidenrod (Taunus), Germany, from which he teaches a path of devotion (bhakti), including practices such as Atma Kriya Yoga.',
+            text3: 'In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.'
         },
         practices: {
             title: 'Our Practices',
@@ -157,9 +157,9 @@ const translations = {
         satguru: {
             title: 'Satguru',
             subtitle: 'Paramahamsa Vishwananda',
-            text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            text2: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            text3: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+            text1: 'Paramahamsa Sri Swami Vishwananda (nascido em 13 de junho de 1978, em Beau Bassin–Rose Hill, Maurício) é um mestre espiritual hindu nascido no Maurício e fundador da Bhakti Marga. Sua organização apresenta sua infância como profundamente devocional, marcada por um encontro formativo com Mahavatar Babaji — relação que ele descreve como o fio condutor de sua missão.',
+            text2: 'Após viajar e oferecer darshan na Europa no fim dos anos 1990, ele fundou oficialmente a Bhakti Marga em 13 de junho de 2005. A sede internacional do movimento é Shree Peetha Nilaya, em Heidenrod (Taunus), Alemanha, de onde ele ensina um caminho de devoção (bhakti), incluindo práticas como Atma Kriya Yoga.',
+            text3: 'Nos últimos anos, ele apresentou a Hari Bhakta Sampradaya, dentro da qual a Bhakti Marga opera, e a missão tem se expandido, passando a incluir templos e centros no mundo todo.'
         },
         practices: {
             title: 'Nossas Práticas',
@@ -411,5 +411,133 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize language on page load
     updateLanguage(currentLang);
+
+    // Satguru Carousel functionality
+    const satguruCarousel = document.querySelector('.satguru-carousel-container');
+    if (satguruCarousel) {
+        const carouselTrack = satguruCarousel.querySelector('.carousel-track');
+        const carouselSlides = satguruCarousel.querySelectorAll('.carousel-slide');
+        const prevBtn = satguruCarousel.querySelector('.carousel-btn-prev');
+        const nextBtn = satguruCarousel.querySelector('.carousel-btn-next');
+        const dots = satguruCarousel.querySelectorAll('.carousel-dot');
+        
+        if (carouselTrack && carouselSlides.length > 0) {
+            let currentIndex = 0;
+            const totalSlides = carouselSlides.length;
+            const slidesToShow = 3; // Show 3 images at once
+            
+            function getSlidesToShow() {
+                if (window.innerWidth <= 768) {
+                    return 1; // Show 1 image on mobile
+                } else if (window.innerWidth <= 1024) {
+                    return 2; // Show 2 images on tablet
+                }
+                return 3; // Show 3 images on desktop
+            }
+            
+            function updateCarousel() {
+                const visibleSlides = getSlidesToShow();
+                const containerWidth = carouselTrack.parentElement.offsetWidth;
+                const gap = 16; // 1rem gap
+                const slideWidth = (containerWidth - (visibleSlides - 1) * gap) / visibleSlides;
+                const translateX = currentIndex * (slideWidth + gap);
+                carouselTrack.style.transform = `translateX(-${translateX}px)`;
+                
+                // Update dots
+                const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                const dotIndex = Math.floor(currentIndex / visibleSlides);
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === dotIndex);
+                });
+            }
+            
+            function nextSlide() {
+                const visibleSlides = getSlidesToShow();
+                const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                if (currentIndex < maxIndex) {
+                    currentIndex += visibleSlides;
+                } else {
+                    currentIndex = 0; // Loop back to start
+                }
+                updateCarousel();
+            }
+            
+            function prevSlide() {
+                const visibleSlides = getSlidesToShow();
+                if (currentIndex > 0) {
+                    currentIndex -= visibleSlides;
+                } else {
+                    const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                    currentIndex = maxIndex; // Loop to end
+                }
+                updateCarousel();
+            }
+            
+            function goToSlide(dotIndex) {
+                const visibleSlides = getSlidesToShow();
+                currentIndex = dotIndex * visibleSlides;
+                const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                updateCarousel();
+            }
+            
+            // Event listeners
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextSlide);
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+            }
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // Touch/swipe support for mobile
+            let startX = 0;
+            let endX = 0;
+            
+            carouselTrack.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const diff = startX - endX;
+                if (Math.abs(diff) > 50) { // Minimum swipe distance
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+            }
+            
+            // Recalculate on window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const visibleSlides = getSlidesToShow();
+                    const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    updateCarousel();
+                }, 250);
+            });
+            
+            // Initialize carousel
+            updateCarousel();
+        }
+    }
 });
 
