@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Center</title>
+    <title>Dhanurdhara Das Ananda</title>
+    <link rel="icon" type="image/png" href="img/ddd-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="img/ddd-favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" data-translate="nav.logo">Wellness Center</div>
+            <div class="logo">
+                <img id="header-logo" src="img/ddd-logo.png" alt="Dhanurdhara Das Ananda" data-translate="nav.logo">
+            </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active" data-translate="nav.home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-translate="nav.about">Bhakti Marga</a></li>
@@ -50,7 +54,7 @@
     <section id="home" class="page active">
         <div class="hero">
             <div class="hero-content">
-                <h1 class="fade-in" data-translate="home.heroTitle">Welcome to Wellness Center</h1>
+                <h1 class="fade-in" data-translate="home.heroTitle">Dhanurdhara Das Ananda</h1>
                 <p class="fade-in-delay" data-translate="home.heroSubtitle">Your journey to wellness begins here</p>
                 <a href="#book-now" class="btn-primary slide-up" data-translate="home.getStarted">Get Started</a>
             </div>
@@ -83,33 +87,31 @@
             <h2 class="page-title" data-translate="about.title">Bhakti Marga</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="img/placeholder.png" alt="About Us">
+                    <img src="img/bm-logo.png" alt="Bhakti Marga">
                 </div>
                 <div class="about-text">
-                    <h3 data-translate="about.storyTitle">Our Story</h3>
-                    <p data-translate="about.story1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p data-translate="about.story2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p data-translate="about.story3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p data-translate="about.story1">Bhakti Marga began in 2005 as a small devotional community dedicated to cultivating a life rooted in love, service, and spiritual practice. Over the years it has grown into a global movement with centres, temples, and ashrams across Europe, the Americas, Africa, and Asia. Its international headquarters, Shree Peetha Nilaya in Germany, serves as the main ashram and training hub. Additional temples and ashrams operate in countries such as Portugal, the UK, France, South Africa, Mauritius, India, the USA, and Brazil, each offering regular community gatherings and devotional programs.<br><br>The path is grounded in bhakti, the practice of directing the heart toward the Divine through meditation, chanting, prayer, puja, and selfless service. Bhakti Marga places a strong emphasis on lived spirituality: developing devotion, cultivating inner transformation, and building supportive communities that help individuals bring spiritual principles into daily life.<br><br>Activities include courses on meditation and yoga, deity worship, satsangs, music programs, retreats, seva initiatives, pilgrimages, and large international events such as kirtan festivals and sacred celebrations. Many country groups also maintain local temples or puja halls where regular prayers and rituals are offered.<br><br>Today Bhakti Marga is active in more than 40 countries, supported by hundreds of volunteers and practitioners who help maintain temples, organise events, and share the teachings. Its aim remains simple: to guide people toward a loving, personal relationship with the Divine and to support a devotional way of living in modern society.</p>
+                    <a href="https://bhaktimarga.org/" target="_blank" rel="noopener noreferrer" class="btn-primary about-read-more" data-translate="about.readMore">Read more</a>
                 </div>
             </div>
             <div class="values">
-                <h3 data-translate="about.valuesTitle">Our Values</h3>
+                <h3 data-translate="about.valuesTitle">4 Arms</h3>
                 <div class="values-grid">
                     <div class="value-item">
-                        <h4 data-translate="about.value1Title">Compassion</h4>
-                        <p data-translate="about.value1Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 data-translate="about.value1Title">Yoga & Meditation</h4>
+                        <p data-translate="about.value1Text">Still the mind, find god within</p>
                     </div>
                     <div class="value-item">
-                        <h4 data-translate="about.value2Title">Excellence</h4>
-                        <p data-translate="about.value2Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 data-translate="about.value2Title">Knowledge</h4>
+                        <p data-translate="about.value2Text">Gain insights and clarity</p>
                     </div>
                     <div class="value-item">
-                        <h4 data-translate="about.value3Title">Integrity</h4>
-                        <p data-translate="about.value3Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 data-translate="about.value3Title">Rituals</h4>
+                        <p data-translate="about.value3Text">Deepen divine connection</p>
                     </div>
                     <div class="value-item">
-                        <h4 data-translate="about.value4Title">Innovation</h4>
-                        <p data-translate="about.value4Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 data-translate="about.value4Title">Devotional Arts</h4>
+                        <p data-translate="about.value4Text">Create an expression of love</p>
                     </div>
                 </div>
             </div>
@@ -129,6 +131,7 @@
                     <p data-translate="satguru.text1">Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with a formative encounter with Mahavatar Babaji in childhood—a relationship he describes as the guiding thread of his mission.</p>
                     <p data-translate="satguru.text2">After traveling and giving darshan in Europe in the late 1990s, he formally established Bhakti Marga on 13 June 2005. The movement's international headquarters is Shree Peetha Nilaya in Heidenrod (Taunus), Germany, from which he teaches a path of devotion (bhakti), including practices such as Atma Kriya Yoga.</p>
                     <p data-translate="satguru.text3">In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.</p>
+                    <a href="https://pages.bhaktimarga.org/in-person-darshan" target="_blank" rel="noopener noreferrer" class="btn-primary satguru-meet-btn" data-translate="satguru.meetHim">Meet Him</a>
                 </div>
             </div>
             <div class="satguru-carousel-container">
@@ -136,22 +139,28 @@
                     <button class="carousel-btn carousel-btn-prev" aria-label="Previous">‹</button>
                     <div class="carousel-track">
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 1">
+                            <img src="img/guruji-1.jpg" alt="Satguru Image 1">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 2">
+                            <img src="img/guruji-2.jpg" alt="Satguru Image 2">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 3">
+                            <img src="img/guruji-3.jpg" alt="Satguru Image 3">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 4">
+                            <img src="img/guruji-4.jpg" alt="Satguru Image 4">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 5">
+                            <img src="img/guruji-5.jpeg" alt="Satguru Image 5">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img/placeholder.png" alt="Satguru Image 6">
+                            <img src="img/guruji-6.jpg" alt="Satguru Image 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/guruji-7.jpg" alt="Satguru Image 7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/guruji-8.jpeg" alt="Satguru Image 8">
                         </div>
                     </div>
                     <button class="carousel-btn carousel-btn-next" aria-label="Next">›</button>
@@ -269,20 +278,8 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone" data-translate="booking.phoneLabel">Phone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" data-translate="booking.dateLabel">Preferred Date</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="time" data-translate="booking.timeLabel">Preferred Time</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" data-translate="booking.messageLabel">Message (Optional)</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
+                        <label for="message" data-translate="booking.messageLabel">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" data-translate="booking.submitButton">Send Message</button>
                 </form>

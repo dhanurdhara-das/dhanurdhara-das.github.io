@@ -15,7 +15,7 @@ const translations = {
             contact: 'Contact'
         },
         home: {
-            heroTitle: 'Welcome to Wellness Center',
+            heroTitle: 'Dhanurdhara Das Ananda',
             heroSubtitle: 'Your journey to wellness begins here',
             getStarted: 'Get Started',
             feature1Title: 'Holistic Approach',
@@ -28,18 +28,19 @@ const translations = {
         about: {
             title: 'Bhakti Marga',
             storyTitle: 'Our Story',
-            story1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            story2: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            story3: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            valuesTitle: 'Our Values',
-            value1Title: 'Compassion',
-            value1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value2Title: 'Excellence',
-            value2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value3Title: 'Integrity',
-            value3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value4Title: 'Innovation',
-            value4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            story1: 'Bhakti Marga began in 2005 as a small devotional community dedicated to cultivating a life rooted in love, service, and spiritual practice. Over the years it has grown into a global movement with centres, temples, and ashrams across Europe, the Americas, Africa, and Asia. Its international headquarters, Shree Peetha Nilaya in Germany, serves as the main ashram and training hub. Additional temples and ashrams operate in countries such as Portugal, the UK, France, South Africa, Mauritius, India, the USA, and Brazil, each offering regular community gatherings and devotional programs.\n\nThe path is grounded in bhakti, the practice of directing the heart toward the Divine through meditation, chanting, prayer, puja, and selfless service. Bhakti Marga places a strong emphasis on lived spirituality: developing devotion, cultivating inner transformation, and building supportive communities that help individuals bring spiritual principles into daily life.\n\nActivities include courses on meditation and yoga, deity worship, satsangs, music programs, retreats, seva initiatives, pilgrimages, and large international events such as kirtan festivals and sacred celebrations. Many country groups also maintain local temples or puja halls where regular prayers and rituals are offered.\n\nToday Bhakti Marga is active in more than 40 countries, supported by hundreds of volunteers and practitioners who help maintain temples, organise events, and share the teachings. Its aim remains simple: to guide people toward a loving, personal relationship with the Divine and to support a devotional way of living in modern society.',
+            story2: '',
+            story3: '',
+            valuesTitle: '4 Arms',
+            value1Title: 'Yoga & Meditation',
+            value1Text: 'Still the mind, find god within',
+            value2Title: 'Knowledge',
+            value2Text: 'Gain insights and clarity',
+            value3Title: 'Rituals',
+            value3Text: 'Deepen divine connection',
+            value4Title: 'Devotional Arts',
+            value4Text: 'Create an expression of love',
+            readMore: 'Read more'
         },
         bio: {
             title: 'Bio',
@@ -62,7 +63,8 @@ const translations = {
             subtitle: 'Paramahamsa Vishwananda',
             text1: 'Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with a formative encounter with Mahavatar Babaji in childhood—a relationship he describes as the guiding thread of his mission.',
             text2: 'After traveling and giving darshan in Europe in the late 1990s, he formally established Bhakti Marga on 13 June 2005. The movement\'s international headquarters is Shree Peetha Nilaya in Heidenrod (Taunus), Germany, from which he teaches a path of devotion (bhakti), including practices such as Atma Kriya Yoga.',
-            text3: 'In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.'
+            text3: 'In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.',
+            meetHim: 'Meet Him'
         },
         practices: {
             title: 'Our Practices',
@@ -87,7 +89,7 @@ const translations = {
             phoneLabel: 'Phone',
             dateLabel: 'Preferred Date',
             timeLabel: 'Preferred Time',
-            messageLabel: 'Message (Optional)',
+            messageLabel: 'Message',
             submitButton: 'Send Message'
         },
         footer: {
@@ -125,18 +127,19 @@ const translations = {
         about: {
             title: 'Bhakti Marga',
             storyTitle: 'Nossa História',
-            story1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            story2: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            story3: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            valuesTitle: 'Nossos Valores',
-            value1Title: 'Compaixão',
-            value1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value2Title: 'Excelência',
-            value2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value3Title: 'Integridade',
-            value3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            value4Title: 'Inovação',
-            value4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            story1: 'Bhakti Marga começou em 2005 como uma pequena comunidade devocional dedicada a cultivar uma vida baseada no amor, no serviço e na prática espiritual. Com o tempo, tornou-se um movimento global com centros, templos e ashrams distribuídos pela Europa, Américas, África e Ásia. Sua sede internacional, Shree Peetha Nilaya, na Alemanha, funciona como o principal ashram e centro de formação. Outros templos e ashrams estão ativos em países como Portugal, Reino Unido, França, África do Sul, Maurício, Índia, Estados Unidos e Brasil, cada um oferecendo encontros comunitários e programas devocionais regulares.\n\nO caminho se fundamenta no bhakti, a prática de direcionar o coração ao Divino por meio de meditação, canto, oração, puja e serviço altruísta. Bhakti Marga valoriza uma espiritualidade vivida: desenvolver devoção, promover transformação interior e sustentar comunidades que ajudam cada pessoa a aplicar princípios espirituais no dia a dia.\n\nAs atividades incluem cursos de meditação e yoga, adoração às deidades, satsangs, programas musicais, retiros, iniciativas de seva, peregrinações e grandes eventos internacionais como festivais de kirtan e celebrações sagradas. Muitos grupos locais também mantêm templos ou salas de puja com orações e rituais regulares.\n\nHoje, Bhakti Marga está presente em mais de 40 países, sustentada por centenas de voluntários e praticantes que mantêm templos, organizam eventos e compartilham os ensinamentos. Seu propósito permanece simples: apoiar cada pessoa a desenvolver uma relação amorosa e pessoal com o Divino e viver a devoção na sociedade contemporânea.',
+            story2: '',
+            story3: '',
+            valuesTitle: '4 Braços',
+            value1Title: 'Yoga e Meditação',
+            value1Text: 'Acalme a mente, encontre Deus dentro de si',
+            value2Title: 'Conhecimento',
+            value2Text: 'Obtenha insights e clareza',
+            value3Title: 'Rituais',
+            value3Text: 'Aprofunde a conexão divina',
+            value4Title: 'Artes Devocionais',
+            value4Text: 'Crie uma expressão de amor',
+            readMore: 'Leia mais'
         },
         bio: {
             title: 'Biografia',
@@ -159,7 +162,8 @@ const translations = {
             subtitle: 'Paramahamsa Vishwananda',
             text1: 'Paramahamsa Sri Swami Vishwananda (nascido em 13 de junho de 1978, em Beau Bassin–Rose Hill, Maurício) é um mestre espiritual hindu nascido no Maurício e fundador da Bhakti Marga. Sua organização apresenta sua infância como profundamente devocional, marcada por um encontro formativo com Mahavatar Babaji — relação que ele descreve como o fio condutor de sua missão.',
             text2: 'Após viajar e oferecer darshan na Europa no fim dos anos 1990, ele fundou oficialmente a Bhakti Marga em 13 de junho de 2005. A sede internacional do movimento é Shree Peetha Nilaya, em Heidenrod (Taunus), Alemanha, de onde ele ensina um caminho de devoção (bhakti), incluindo práticas como Atma Kriya Yoga.',
-            text3: 'Nos últimos anos, ele apresentou a Hari Bhakta Sampradaya, dentro da qual a Bhakti Marga opera, e a missão tem se expandido, passando a incluir templos e centros no mundo todo.'
+            text3: 'Nos últimos anos, ele apresentou a Hari Bhakta Sampradaya, dentro da qual a Bhakti Marga opera, e a missão tem se expandido, passando a incluir templos e centros no mundo todo.',
+            meetHim: 'O Encontre'
         },
         practices: {
             title: 'Nossas Práticas',
@@ -184,7 +188,7 @@ const translations = {
             phoneLabel: 'Telefone',
             dateLabel: 'Data Preferida',
             timeLabel: 'Horário Preferido',
-            messageLabel: 'Mensagem (Opcional)',
+            messageLabel: 'Mensagem',
             submitButton: 'Enviar Mensagem'
         },
         footer: {
@@ -224,6 +228,22 @@ function updateLanguage(lang) {
             element.placeholder = translation;
         } else if (element.tagName === 'OPTION') {
             element.textContent = translation;
+        } else if (element.tagName === 'P') {
+            // Convert newlines to <br> tags for paragraphs
+            element.innerHTML = translation.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+        } else if (element.tagName === 'LABEL') {
+            // For labels, check if associated input is required and add asterisk
+            const inputId = element.getAttribute('for');
+            if (inputId) {
+                const input = document.getElementById(inputId);
+                if (input && input.hasAttribute('required')) {
+                    element.innerHTML = translation + ' <span class="required">*</span>';
+                } else {
+                    element.textContent = translation;
+                }
+            } else {
+                element.textContent = translation;
+            }
         } else {
             element.textContent = translation;
         }
@@ -243,12 +263,54 @@ function updateLanguage(lang) {
     }
 }
 
+// Smooth scroll fallback function
+function smoothScrollTo(target, duration) {
+    const start = window.pageYOffset;
+    const distance = target - start;
+    let startTime = null;
+
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+        
+        window.scrollTo(0, start + distance * ease);
+        
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    requestAnimationFrame(animation);
+}
+
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+
+    // Logo element
+    const headerLogo = document.getElementById('header-logo');
+    
+    // Function to update logo based on active page
+    function updateLogo(activePageId) {
+        if (headerLogo) {
+            if (activePageId === 'about') {
+                // Bhakti Marga tab - use blue logo
+                headerLogo.src = 'img/ddd-blue-logo.png';
+            } else {
+                // All other tabs - use default logo
+                headerLogo.src = 'img/ddd-logo.png';
+            }
+        }
+    }
 
     // Handle navigation clicks
     navLinks.forEach(link => {
@@ -266,11 +328,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetPage) {
                 targetPage.classList.add('active');
                 
-                // Smooth scroll to top
+                // Update logo based on active page
+                updateLogo(targetId);
+                
+                // Smooth scroll to top with easing
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
+                
+                // Fallback for browsers that don't support smooth scroll
+                if (!('scrollBehavior' in document.documentElement.style)) {
+                    smoothScrollTo(0, 500);
+                }
             }
             
             // Close mobile menu
@@ -299,6 +369,10 @@ document.addEventListener('DOMContentLoaded', function() {
         pages.forEach(p => p.classList.remove('active'));
         document.querySelector(`a[href="#${hash}"]`).classList.add('active');
         document.getElementById(hash).classList.add('active');
+        updateLogo(hash);
+    } else {
+        // Default to home page logo
+        updateLogo('home');
     }
 
     // Handle browser back/forward buttons
@@ -309,6 +383,9 @@ document.addEventListener('DOMContentLoaded', function() {
             pages.forEach(p => p.classList.remove('active'));
             document.querySelector(`a[href="#${hash}"]`).classList.add('active');
             document.getElementById(hash).classList.add('active');
+            updateLogo(hash);
+        } else {
+            updateLogo('home');
         }
     });
 
@@ -424,38 +501,54 @@ document.addEventListener('DOMContentLoaded', function() {
         if (carouselTrack && carouselSlides.length > 0) {
             let currentIndex = 0;
             const totalSlides = carouselSlides.length;
-            const slidesToShow = 3; // Show 3 images at once
             
-            function getSlidesToShow() {
-                if (window.innerWidth <= 768) {
-                    return 1; // Show 1 image on mobile
-                } else if (window.innerWidth <= 1024) {
-                    return 2; // Show 2 images on tablet
+            function getVisibleSlidesCount() {
+                // Calculate how many slides fit in the viewport
+                const containerWidth = carouselTrack.parentElement.offsetWidth;
+                const gap = 16; // 1rem gap
+                let totalWidth = 0;
+                let count = 0;
+                
+                for (let i = 0; i < totalSlides; i++) {
+                    const slideWidth = carouselSlides[i].offsetWidth;
+                    if (totalWidth + slideWidth + (count > 0 ? gap : 0) <= containerWidth) {
+                        totalWidth += slideWidth + (count > 0 ? gap : 0);
+                        count++;
+                    } else {
+                        break;
+                    }
                 }
-                return 3; // Show 3 images on desktop
+                return Math.max(1, count); // At least show 1 slide
             }
             
             function updateCarousel() {
-                const visibleSlides = getSlidesToShow();
-                const containerWidth = carouselTrack.parentElement.offsetWidth;
+                // Calculate translateX based on actual slide positions
+                let translateX = 0;
                 const gap = 16; // 1rem gap
-                const slideWidth = (containerWidth - (visibleSlides - 1) * gap) / visibleSlides;
-                const translateX = currentIndex * (slideWidth + gap);
+                
+                for (let i = 0; i < currentIndex && i < totalSlides; i++) {
+                    translateX += carouselSlides[i].offsetWidth + gap;
+                }
+                
                 carouselTrack.style.transform = `translateX(-${translateX}px)`;
                 
-                // Update dots
-                const maxIndex = Math.max(0, totalSlides - visibleSlides);
-                const dotIndex = Math.floor(currentIndex / visibleSlides);
+                // Update dots based on current position
+                const visibleCount = getVisibleSlidesCount();
+                const maxIndex = Math.max(0, totalSlides - visibleCount);
+                const dotIndex = Math.floor((currentIndex / totalSlides) * dots.length);
+                
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === dotIndex);
                 });
             }
             
             function nextSlide() {
-                const visibleSlides = getSlidesToShow();
-                const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                const visibleCount = getVisibleSlidesCount();
+                const maxIndex = Math.max(0, totalSlides - visibleCount);
+                
                 if (currentIndex < maxIndex) {
-                    currentIndex += visibleSlides;
+                    // Move forward by approximately one visible group
+                    currentIndex = Math.min(currentIndex + visibleCount, maxIndex);
                 } else {
                     currentIndex = 0; // Loop back to start
                 }
@@ -463,20 +556,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             function prevSlide() {
-                const visibleSlides = getSlidesToShow();
+                const visibleCount = getVisibleSlidesCount();
+                
                 if (currentIndex > 0) {
-                    currentIndex -= visibleSlides;
+                    // Move backward by approximately one visible group
+                    currentIndex = Math.max(0, currentIndex - visibleCount);
                 } else {
-                    const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                    const maxIndex = Math.max(0, totalSlides - visibleCount);
                     currentIndex = maxIndex; // Loop to end
                 }
                 updateCarousel();
             }
             
             function goToSlide(dotIndex) {
-                const visibleSlides = getSlidesToShow();
-                currentIndex = dotIndex * visibleSlides;
-                const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                // Calculate position based on dot index
+                const maxIndex = Math.max(0, totalSlides - getVisibleSlidesCount());
+                currentIndex = Math.floor((dotIndex / dots.length) * totalSlides);
                 if (currentIndex > maxIndex) {
                     currentIndex = maxIndex;
                 }
@@ -526,8 +621,8 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
-                    const visibleSlides = getSlidesToShow();
-                    const maxIndex = Math.max(0, totalSlides - visibleSlides);
+                    const visibleCount = getVisibleSlidesCount();
+                    const maxIndex = Math.max(0, totalSlides - visibleCount);
                     if (currentIndex > maxIndex) {
                         currentIndex = maxIndex;
                     }
@@ -535,8 +630,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 250);
             });
             
-            // Initialize carousel
-            updateCarousel();
+            // Wait for images to load before initializing
+            const images = carouselTrack.querySelectorAll('img');
+            let imagesLoaded = 0;
+            
+            if (images.length > 0) {
+                images.forEach(img => {
+                    if (img.complete) {
+                        imagesLoaded++;
+                    } else {
+                        img.addEventListener('load', () => {
+                            imagesLoaded++;
+                            if (imagesLoaded === images.length) {
+                                updateCarousel();
+                            }
+                        });
+                    }
+                });
+                
+                if (imagesLoaded === images.length) {
+                    updateCarousel();
+                }
+            } else {
+                updateCarousel();
+            }
         }
     }
 });

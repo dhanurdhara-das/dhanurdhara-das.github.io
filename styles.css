@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Navigation */
@@ -43,10 +44,15 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
 }
 
 .logo:hover {
@@ -199,7 +205,8 @@ body {
 .page {
     display: none;
     padding-top: 80px;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
 }
 
 .page.active {
@@ -309,11 +316,11 @@ body {
 /* Buttons */
 .btn-primary {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 7px 40px;
     background: var(--primary-color);
     color: var(--text-dark);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-weight: 600;
     transition: all 0.3s ease;
     border: none;
@@ -324,7 +331,7 @@ body {
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(230, 204, 0, 0.4);
+    box-shadow: 0 5px 15px #00000073;
 }
 
 /* Features */
@@ -361,7 +368,83 @@ body {
     color: var(--primary-color);
 }
 
-/* About Page */
+/* About Page - Bhakti Marga Theme Color */
+#about.active {
+    --about-primary-color: #16254C;
+}
+
+#about.active .page-title,
+#about.active .about-text h3,
+#about.active .values h3 {
+    color: var(--about-primary-color, #16254C);
+}
+
+#about.active .page-title::after {
+    background: #16254C;
+}
+
+.nav-link[href="#about"].active {
+    color: #16254C;
+}
+
+.nav-link[href="#about"].active::after {
+    background: #16254C;
+}
+
+/* Satguru Page Theme Color */
+#satguru.active {
+    --satguru-primary-color: #B5924B;
+}
+
+#satguru.active .page-title,
+#satguru.active .about-text h3 {
+    color: var(--satguru-primary-color, #B5924B);
+}
+
+#satguru.active .page-title::after {
+    background: #B5924B;
+}
+
+.nav-link[href="#satguru"].active {
+    color: #B5924B;
+}
+
+.nav-link[href="#satguru"].active::after {
+    background: #B5924B;
+}
+
+#satguru.active .carousel-btn {
+    background: #B5924B;
+    color: white;
+}
+
+#satguru.active .carousel-btn:hover {
+    background: #9a7a3d;
+}
+
+#satguru.active .carousel-dot.active {
+    background: #B5924B;
+}
+
+#satguru.active .carousel-dot:hover {
+    background: #9a7a3d;
+}
+
+.about-text .satguru-meet-btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+#satguru.active .satguru-meet-btn {
+    background: #B5924B;
+    color: white;
+}
+
+#satguru.active .satguru-meet-btn:hover {
+    background: #9a7a3d;
+    color: white;
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -370,10 +453,16 @@ body {
     align-items: start;
 }
 
+.about-image {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    height: fit-content;
+}
+
 .about-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 10px 30px var(--shadow);
     transition: transform 0.3s ease;
 }
 
@@ -394,12 +483,27 @@ body {
     line-height: 1.8;
 }
 
+.about-text .about-read-more {
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+#about.active .about-read-more {
+    background: #16254C;
+    color: white;
+}
+
+#about.active .about-read-more:hover {
+    background: #1a2f5f;
+    color: white;
+}
+
 .values {
     margin-top: 4rem;
 }
 
 .values h3 {
-    text-align: center;
+    text-align: left;
     color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -407,27 +511,33 @@ body {
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
 .value-item {
-    background: var(--bg-light);
+    background: #16254C;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    color: white;
+    transform: scale(1) !important;
+    animation: none !important;
 }
 
 .value-item:hover {
-    transform: translateX(10px);
+    transform: scale(1.05) !important;
     box-shadow: 0 5px 15px var(--shadow);
 }
 
 .value-item h4 {
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    color: white;
 }
 
 /* Bio Page */
@@ -579,6 +689,11 @@ body {
     font-weight: 500;
 }
 
+.form-group label .required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -675,6 +790,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
     .page-title {
         font-size: 2rem;
     }
@@ -683,6 +802,11 @@ body {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Additional Transitions */
@@ -692,8 +816,7 @@ img {
 
 .card,
 .feature-card,
-.practice-card,
-.value-item {
+.practice-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -722,6 +845,7 @@ img {
     width: 100%;
     overflow: hidden;
     margin-bottom: 2rem;
+    padding: 40px 0;
 }
 
 .carousel-track {
@@ -729,24 +853,30 @@ img {
     gap: 1rem;
     transition: transform 0.5s ease;
     will-change: transform;
+    padding: 0 40px;
 }
 
 .carousel-slide {
-    flex: 0 0 calc(33.333% - 0.667rem);
-    min-width: 0;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
 }
 
 .carousel-slide img {
-    width: 100%;
     height: 300px;
-    object-fit: cover;
+    width: auto;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carousel-slide img:hover {
     transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-btn {
@@ -808,17 +938,7 @@ img {
 }
 
 /* Responsive Carousel */
-@media (max-width: 1024px) {
-    .carousel-slide {
-        flex: 0 0 calc(50% - 0.5rem);
-    }
-}
-
 @media (max-width: 768px) {
-    .carousel-slide {
-        flex: 0 0 calc(100% - 0rem);
-    }
-    
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -831,10 +951,6 @@ img {
     
     .carousel-btn-next {
         right: 0.5rem;
-    }
-    
-    .carousel-slide img {
-        height: 250px;
     }
 }
 
