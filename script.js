@@ -96,7 +96,7 @@ const translations = {
             text: 'Wellness Center. All rights reserved.'
         },
         messages: {
-            bookingSuccess: 'Thank you for your message! We will contact you soon.'
+            bookingSuccess: 'Message sent successfully'
         }
     },
     pt: {
@@ -195,7 +195,7 @@ const translations = {
             text: 'Centro de Bem-Estar. Todos os direitos reservados.'
         },
         messages: {
-            bookingSuccess: 'Obrigado pela sua mensagem! Entraremos em contato em breve.'
+            bookingSuccess: 'Mensagem enviada com sucesso'
         }
     }
 };
@@ -390,21 +390,145 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form submission
+    // EmailJS Configuration
+    // To set up EmailJS:
+    // 1. Sign up for free at https://www.emailjs.com/
+    // 2. Go to Email Services and add your email service (Gmail, Outlook, etc.)
+    // 3. Go to Email Templates and create a new template with variables: {{from_name}}, {{from_email}}, {{message}}
+    // 4. Go to Account > API Keys and copy your Public Key
+    // 5. Replace the values below with your actual IDs
+    
+    const EMAILJS_CONFIG = {
+        PUBLIC_KEY: "004uXZyZWr4V1_wSk",      // EmailJS Public Key
+        SERVICE_ID: "service_wzm5n78",       // Email Service ID
+        TEMPLATE_ID: "template_ertyu673mmnd8"      // Email Template ID
+    };
+
+    // reCAPTCHA Configuration
+    const RECAPTCHA_CONFIG = {
+        SITE_KEY: "6Lf4ZiAsAAAAAG7JVAuVTY0Pn63Kyn6jN47VBlCc"  // reCAPTCHA Site Key
+    };
+
+    // Initialize EmailJS - wait for library to load
+    function initializeEmailJS() {
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+            console.log('EmailJS initialized');
+        } else {
+            // Retry if library not loaded yet
+            setTimeout(initializeEmailJS, 100);
+        }
+    }
+    
+    // Start initialization
+    initializeEmailJS();
+
     const bookingForm = document.querySelector('.booking-form');
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            // Check if EmailJS is loaded and initialized
+            if (typeof emailjs === 'undefined') {
+                alert('Email service is loading. Please wait a moment and try again.');
+                return;
+            }
             
-            // Show success message (in a real app, you'd send this to a server)
-            alert(translate('messages.bookingSuccess'));
+            // Check if EmailJS is configured
+            if (EMAILJS_CONFIG.PUBLIC_KEY === "YOUR_PUBLIC_KEY" || 
+                EMAILJS_CONFIG.SERVICE_ID === "YOUR_SERVICE_ID" || 
+                EMAILJS_CONFIG.TEMPLATE_ID === "YOUR_TEMPLATE_ID") {
+                alert('Email service is not configured. Please contact the website administrator.');
+                return;
+            }
             
-            // Reset form
-            this.reset();
+            // Check if reCAPTCHA is configured
+            if (RECAPTCHA_CONFIG.SITE_KEY === "YOUR_SITE_KEY") {
+                // reCAPTCHA not configured - proceed without it
+                submitForm(this);
+                return;
+            }
+            
+            // Execute reCAPTCHA
+            const form = this;
+            if (typeof grecaptcha !== 'undefined') {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute(RECAPTCHA_CONFIG.SITE_KEY, {action: 'submit'})
+                        .then(function(token) {
+                            // reCAPTCHA verified - submit form
+                            submitForm(form, token);
+                        })
+                        .catch(function(error) {
+                            console.error('reCAPTCHA error:', error);
+                            alert('reCAPTCHA verification failed. Please try again.');
+                        });
+                });
+            } else {
+                // reCAPTCHA not loaded - proceed without it
+                submitForm(form);
+            }
         });
+    }
+
+    // Form submission function
+    function submitForm(form, recaptchaToken = null) {
+        // Get form data
+        const formData = new FormData(form);
+        const data = {
+            from_name: formData.get('name'),
+            from_email: formData.get('email'),
+            message: formData.get('message')
+        };
+        
+        // Add reCAPTCHA token if available
+        if (recaptchaToken) {
+            data['g-recaptcha-response'] = recaptchaToken;
+        }
+        
+        // Show loading state
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        
+        // Send email using EmailJS
+        emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, data)
+                .then(function(response) {
+                    // Success
+                    console.log('Email sent successfully!', response.status, response.text);
+                    
+                    // Show success message with form data
+                    const successModal = document.getElementById('success-message');
+                    const successName = document.getElementById('success-name');
+                    const successEmail = document.getElementById('success-email');
+                    const successMessageText = document.getElementById('success-message-text');
+                    
+                    if (successModal && successName && successEmail && successMessageText) {
+                        successName.textContent = data.from_name;
+                        successEmail.textContent = data.from_email;
+                        successMessageText.textContent = data.message;
+                        successModal.style.display = 'flex';
+                        
+                        // Update translations in success modal
+                        updateLanguage(currentLang);
+                    }
+                    
+                    form.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }, function(error) {
+                    // Error - show detailed error
+                    console.error('EmailJS error details:', error);
+                    console.error('Error status:', error.status);
+                    console.error('Error text:', error.text);
+                    let errorMessage = 'Sorry, there was an error sending your message. ';
+                    if (error.text) {
+                        errorMessage += 'Error: ' + error.text;
+                    }
+                    alert(errorMessage);
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                });
     }
 
     // Add scroll effect to navbar

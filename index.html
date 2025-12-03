@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dhanurdhara Das Ananda - Teacher of Spiritual Knowledge, Rituals & Atma Kriya Yoga">
+    <meta name="author" content="Dhanurdhara Das Ananda">
+    <meta property="og:title" content="Dhanurdhara Das Ananda">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dhanurdharadas.com">
+    <link rel="canonical" href="https://dhanurdharadas.com">
     <title>Dhanurdhara Das Ananda</title>
     <link rel="icon" type="image/png" href="img/ddd-favicon.png">
     <link rel="shortcut icon" type="image/png" href="img/ddd-favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf4ZiAsAAAAAG7JVAuVTY0Pn63Kyn6jN47VBlCc" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -283,6 +291,19 @@
                     </div>
                     <button type="submit" class="btn-primary" data-translate="booking.submitButton">Send Message</button>
                 </form>
+                <!-- Success Message Modal -->
+                <div id="success-message" class="success-message-modal" style="display: none;">
+                    <div class="success-message-content">
+                        <div class="success-checkmark">✓</div>
+                        <h3 class="success-title" data-translate="messages.bookingSuccess">Message sent successfully</h3>
+                        <div class="success-form-data">
+                            <p><strong>Name:</strong> <span id="success-name"></span></p>
+                            <p><strong>Email:</strong> <span id="success-email"></span></p>
+                            <p><strong>Message:</strong> <span id="success-message-text"></span></p>
+                        </div>
+                        <button class="btn-primary success-close-btn" onclick="document.getElementById('success-message').style.display='none'">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
