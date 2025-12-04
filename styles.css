@@ -921,11 +921,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0.5rem;
 }
 
 .footer-logo img {
     width: 120px;
     height: auto;
+    display: block;
+    max-width: 100%;
+    opacity: 0.95;
     filter: brightness(0) invert(1);
 }
 
