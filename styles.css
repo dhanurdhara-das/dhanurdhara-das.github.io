@@ -715,14 +715,18 @@ body {
     right: 0;
     background: var(--white);
     padding: 1.5rem 2rem;
-    transition: transform 0.4s ease, padding 0.4s ease;
-    transform: translateY(0);
+    transition: bottom 0.4s ease, padding 0.4s ease;
     border-radius: 0 0 10px 10px;
+    max-height: 250px;
+    overflow-y: auto;
 }
 
 .practice-card:hover .practice-content {
-    transform: translateY(-250px);
+    bottom: auto;
+    top: 0;
     padding: 2rem;
+    max-height: 250px;
+    border-radius: 10px 10px 0 0;
 }
 
 .practice-content h3 {
