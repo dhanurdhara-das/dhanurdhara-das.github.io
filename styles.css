@@ -963,6 +963,13 @@ body {
 .booking-form .btn-primary {
     width: 100%;
     margin-top: 1rem;
+    background: #e6cc00;
+}
+
+.booking-form .btn-primary:hover {
+    background: #f0d933;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #00000073;
 }
 
 /* Footer */
