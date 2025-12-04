@@ -693,6 +693,9 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px var(--shadow);
     transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .practice-card:hover {
@@ -713,6 +716,14 @@ body {
 
 .practice-content {
     padding: 2rem;
+    transition: transform 0.3s ease;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.practice-card:hover .practice-content {
+    transform: translateY(-20px);
 }
 
 .practice-content h3 {
@@ -720,23 +731,16 @@ body {
     margin-bottom: 1rem;
 }
 
-.practice-content p {
+.practice-description {
     color: var(--text-light);
-    margin-bottom: 1rem;
     line-height: 1.8;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 0;
 }
 
-.practice-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.practice-link:hover {
-    transform: translateX(5px);
-    color: var(--primary-dark);
+.practice-card:hover .practice-description {
+    opacity: 1;
 }
 
 /* Contact Page */

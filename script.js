@@ -70,15 +70,23 @@ const translations = {
         practices: {
             title: 'Our Practices',
             practice1Title: 'Atma Kriya Yoga',
+            practice1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice2Title: 'Babaji Surya Namaskar',
+            practice2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice3Title: 'Om Chanting',
+            practice3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice4Title: 'Simple Puja',
+            practice4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice5Title: 'Abhishekam',
+            practice5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice6Title: 'Yajna',
+            practice6Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice7Title: 'Kalash Puja',
+            practice7Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice8Title: 'Bhagavad Gita',
+            practice8Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice9Title: 'Tadatmya Vedanta',
-            learnMore: 'Learn More →'
+            practice9Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare'
         },
         booking: {
             title: 'Contact',
@@ -213,15 +221,23 @@ const translations = {
         practices: {
             title: 'Nossas Práticas',
             practice1Title: 'Atma Kriya Yoga',
+            practice1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice2Title: 'Babaji Surya Namaskar',
+            practice2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice3Title: 'Om Chanting',
+            practice3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice4Title: 'Simple Puja',
+            practice4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice5Title: 'Abhishekam',
+            practice5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice6Title: 'Yajna',
+            practice6Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice7Title: 'Kalash Puja',
+            practice7Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice8Title: 'Bhagavad Gita',
+            practice8Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice9Title: 'Tadatmya Vedanta',
-            learnMore: 'Saiba Mais →'
+            practice9Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare'
         },
         booking: {
             title: 'Contato',
