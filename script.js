@@ -415,6 +415,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             
+            // Update URL hash
+            window.location.hash = '#' + targetId;
+            
             // Remove active class from all links and pages
             navLinks.forEach(l => l.classList.remove('active'));
             pages.forEach(p => p.classList.remove('active'));
@@ -464,24 +467,59 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hash && document.getElementById(hash)) {
         navLinks.forEach(l => l.classList.remove('active'));
         pages.forEach(p => p.classList.remove('active'));
-        document.querySelector(`a[href="#${hash}"]`).classList.add('active');
-        document.getElementById(hash).classList.add('active');
-        updateLogo(hash);
+        
+        // Find and activate the corresponding nav link if it exists
+        const navLink = document.querySelector(`a[href="#${hash}"]`);
+        if (navLink) {
+            navLink.classList.add('active');
+        }
+        
+        // Activate the target page
+        const targetPage = document.getElementById(hash);
+        if (targetPage) {
+            targetPage.classList.add('active');
+            updateLogo(hash);
+        }
     } else {
-        // Default to home page logo
+        // Default to home page
+        navLinks.forEach(l => l.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        document.querySelector('a[href="#home"]').classList.add('active');
+        document.getElementById('home').classList.add('active');
         updateLogo('home');
     }
 
-    // Handle browser back/forward buttons
+    // Handle browser back/forward buttons and direct hash navigation
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.substring(1);
         if (hash && document.getElementById(hash)) {
             navLinks.forEach(l => l.classList.remove('active'));
             pages.forEach(p => p.classList.remove('active'));
-            document.querySelector(`a[href="#${hash}"]`).classList.add('active');
-            document.getElementById(hash).classList.add('active');
-            updateLogo(hash);
+            
+            // Find and activate the corresponding nav link if it exists
+            const navLink = document.querySelector(`a[href="#${hash}"]`);
+            if (navLink) {
+                navLink.classList.add('active');
+            }
+            
+            // Activate the target page
+            const targetPage = document.getElementById(hash);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                updateLogo(hash);
+                
+                // Smooth scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         } else {
+            // Default to home if no hash or invalid hash
+            navLinks.forEach(l => l.classList.remove('active'));
+            pages.forEach(p => p.classList.remove('active'));
+            document.querySelector('a[href="#home"]').classList.add('active');
+            document.getElementById('home').classList.add('active');
             updateLogo('home');
         }
     });
