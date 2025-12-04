@@ -40,7 +40,8 @@ const translations = {
             value3Text: 'Deepen divine connection',
             value4Title: 'Devotional Arts',
             value4Text: 'Create an expression of love',
-            readMore: 'Read more'
+            readMore: 'Read more',
+            socialMediaTitle: 'Follow Bhakti Marga'
         },
         bio: {
             title: 'Bio',
@@ -93,7 +94,53 @@ const translations = {
             submitButton: 'Send Message'
         },
         footer: {
-            text: 'Wellness Center. All rights reserved.'
+            text: 'Dhanurdhara Das Ananda. All rights reserved.',
+            privacyLink: 'Privacy Policy'
+        },
+        privacy: {
+            title: 'Privacy Policy',
+            lastUpdated: 'Last updated: 2025',
+            intro: 'This website is a personal project operated by <strong>Dhanurdhara Das Ananda (Guilherme da Silva)</strong>. Only minimal data is collected, and only for responding to messages submitted through the contact form.',
+            section1Title: '1. Data collected through the contact form',
+            section1Intro: 'When you send a message, the following information is collected:',
+            section1Item1: 'Full name',
+            section1Item2: 'Email address',
+            section1Item3: 'Your message',
+            section1FormJS: 'The form is handled by a third-party service called <strong>FormJS</strong>. Your data is:',
+            section1FormJSItem1: 'stored on FormJS servers, and',
+            section1FormJSItem2: 'forwarded by email to: <strong>gui.alucios@gmail.com</strong>.',
+            section1Contact: 'Your contact for privacy inquiries is: <strong>dhanurdharadas@bhaktimarga.org</strong>.',
+            section1Policy: 'FormJS processes and stores your submission according to its own privacy policy, which can be found on the FormJS website.',
+            section2Title: '2. Google reCAPTCHA v3',
+            section2Intro: 'The form uses <strong>Google reCAPTCHA v3</strong> to prevent spam and abuse. reCAPTCHA may collect technical data including:',
+            section2Item1: 'IP address',
+            section2Item2: 'Browser details',
+            section2Item3: 'Interaction patterns',
+            section2Policy: 'Google processes this data according to its own policies:',
+            section2Policy1: 'Google Privacy Policy',
+            section2Policy2: 'Google Terms of Service',
+            section3Title: '3. Hosting & Technical Logs',
+            section3Content: 'This site is hosted on <strong>GitHub Pages</strong>, with the domain managed by <strong>Namecheap</strong>. Both providers may collect standard server logs, such as IP addresses and browser information, which are handled according to their own policies.',
+            section4Title: '4. Purpose of Processing',
+            section4Content: 'The information you provide is used only to reply to your message. No profiling or marketing uses are involved.',
+            section5Title: '5. Sharing',
+            section5Intro: 'Your data is not sold. It is shared only with:',
+            section5Item1: '<strong>FormJS</strong>, which receives and stores your form submission,',
+            section5Item2: 'Email services required to deliver your message,',
+            section5Item3: '<strong>Google</strong> (via reCAPTCHA),',
+            section5Item4: 'Hosting and infrastructure providers mentioned above.',
+            section6Title: '6. Storage Duration',
+            section6Intro: 'Your message is stored:',
+            section6Item1: 'on FormJS servers, according to FormJS\'s own retention rules, and',
+            section6Item2: 'in the email inbox of <strong>gui.alucios@gmail.com</strong> until deleted manually or upon your request.',
+            section7Title: '7. Your Rights (GDPR)',
+            section7Intro: 'You may request:',
+            section7Item1: 'Access to your data',
+            section7Item2: 'Correction',
+            section7Item3: 'Deletion',
+            section7Contact: 'For such requests, contact: <strong>dhanurdharadas@bhaktimarga.org</strong>',
+            section8Title: '8. Contact',
+            section8Content: 'For privacy questions, please email:<br><strong>dhanurdharadas@bhaktimarga.org</strong>'
         },
         messages: {
             bookingSuccess: 'Message sent successfully'
@@ -139,7 +186,8 @@ const translations = {
             value3Text: 'Aprofunde a conexão divina',
             value4Title: 'Artes Devocionais',
             value4Text: 'Crie uma expressão de amor',
-            readMore: 'Leia mais'
+            readMore: 'Leia mais',
+            socialMediaTitle: 'Siga Bhakti Marga'
         },
         bio: {
             title: 'Biografia',
@@ -192,7 +240,53 @@ const translations = {
             submitButton: 'Enviar Mensagem'
         },
         footer: {
-            text: 'Centro de Bem-Estar. Todos os direitos reservados.'
+            text: 'Dhanurdhara Das Ananda. Todos os direitos reservados.',
+            privacyLink: 'Política de Privacidade'
+        },
+        privacy: {
+            title: 'Política de Privacidade',
+            lastUpdated: 'Última atualização: 2025',
+            intro: 'Este site é um projeto pessoal operado por <strong>Dhanurdhara Das Ananda (Guilherme da Silva)</strong>. Coletamos apenas os dados mínimos necessários para responder às mensagens enviadas através do formulário de contato.',
+            section1Title: '1. Dados coletados pelo formulário',
+            section1Intro: 'Quando você envia uma mensagem, são coletadas as seguintes informações:',
+            section1Item1: 'Nome completo',
+            section1Item2: 'Endereço de e-mail',
+            section1Item3: 'Sua mensagem',
+            section1FormJS: 'O formulário é gerenciado por um serviço de terceiros chamado <strong>FormJS</strong>. Seus dados são:',
+            section1FormJSItem1: 'armazenados nos servidores do FormJS, e',
+            section1FormJSItem2: 'encaminhados por e-mail para: <strong>gui.alucios@gmail.com</strong>.',
+            section1Contact: 'Para questões de privacidade, o contato é: <strong>dhanurdharadas@bhaktimarga.org</strong>.',
+            section1Policy: 'O FormJS processa e armazena suas informações de acordo com a própria política de privacidade, disponível no site do FormJS.',
+            section2Title: '2. Google reCAPTCHA v3',
+            section2Intro: 'O formulário utiliza <strong>Google reCAPTCHA v3</strong> para proteção contra spam. O reCAPTCHA pode coletar dados técnicos, como:',
+            section2Item1: 'Endereço IP',
+            section2Item2: 'Informações do navegador',
+            section2Item3: 'Padrões de uso e interação',
+            section2Policy: 'Esses dados são processados pelo Google conforme suas próprias políticas, incluindo:',
+            section2Policy1: 'Política de Privacidade do Google',
+            section2Policy2: 'Termos de Serviço do Google',
+            section3Title: '3. Hospedagem e registros técnicos',
+            section3Content: 'Este site é hospedado no <strong>GitHub Pages</strong>, com domínio registrado na <strong>Namecheap</strong>. Ambos os provedores podem coletar registros técnicos padrão, incluindo endereços IP e informações do navegador, de acordo com as políticas deles.',
+            section4Title: '4. Finalidade do processamento',
+            section4Content: 'Os dados enviados são usados exclusivamente para responder à sua mensagem. Não há uso para marketing ou criação de perfis.',
+            section5Title: '5. Compartilhamento',
+            section5Intro: 'Seus dados não são vendidos. Eles são compartilhados apenas com:',
+            section5Item1: '<strong>FormJS</strong>, que recebe e armazena sua submissão,',
+            section5Item2: 'Serviços de e-mail necessários para entregar a mensagem,',
+            section5Item3: '<strong>Google</strong> (através do reCAPTCHA),',
+            section5Item4: 'Provedores de hospedagem e infraestrutura mencionados acima.',
+            section6Title: '6. Prazo de armazenamento',
+            section6Intro: 'A sua mensagem fica armazenada:',
+            section6Item1: 'nos servidores do FormJS, conforme as regras de retenção do próprio FormJS, e',
+            section6Item2: 'na caixa de entrada do e-mail <strong>gui.alucios@gmail.com</strong> até ser apagada manualmente ou mediante sua solicitação.',
+            section7Title: '7. Seus direitos (GDPR)',
+            section7Intro: 'Você pode solicitar:',
+            section7Item1: 'Acesso aos seus dados',
+            section7Item2: 'Correção',
+            section7Item3: 'Exclusão',
+            section7Contact: 'Para isso, entre em contato pelo e-mail: <strong>dhanurdharadas@bhaktimarga.org</strong>',
+            section8Title: '8. Contato',
+            section8Content: 'Para dúvidas sobre esta política, escreva para:<br><strong>dhanurdharadas@bhaktimarga.org</strong>'
         },
         messages: {
             bookingSuccess: 'Mensagem enviada com sucesso'
@@ -229,8 +323,11 @@ function updateLanguage(lang) {
         } else if (element.tagName === 'OPTION') {
             element.textContent = translation;
         } else if (element.tagName === 'P') {
-            // Convert newlines to <br> tags for paragraphs
+            // Convert newlines to <br> tags for paragraphs, preserve HTML
             element.innerHTML = translation.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+        } else if (element.tagName === 'LI') {
+            // Preserve HTML in list items (e.g., <strong> tags)
+            element.innerHTML = translation;
         } else if (element.tagName === 'LABEL') {
             // For labels, check if associated input is required and add asterisk
             const inputId = element.getAttribute('for');
