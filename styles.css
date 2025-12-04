@@ -268,8 +268,52 @@ body {
     align-items: center;
 }
 
+/* Home Tab Theme - Yellow Gradient */
+#home.active .hero {
+    max-width: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, #e6cc00 0%, #e6cc0085 50%, #ffffff 100%);
+    margin-bottom: 2rem;
+    margin-top: -10px;
+}
+
+/* Navbar background for home tab */
+.navbar.home-active {
+    background-color: #e6cc00;
+    box-shadow: none !important;
+}
+
+/* Header logo filter for home tab */
+.navbar.home-active #header-logo {
+    filter: brightness(0);
+}
+
+/* Navbar links styling for home tab */
+.navbar.home-active .nav-link {
+    color: var(--text-dark);
+}
+
+.navbar.home-active .nav-link.active {
+    color: var(--text-dark);
+}
+
+.navbar.home-active .nav-link:hover {
+    color: var(--text-dark);
+}
+
+.navbar.home-active .nav-link::after {
+    background: #000000;
+}
+
+.navbar.home-active .nav-link:hover::after,
+.navbar.home-active .nav-link.active::after {
+    width: 100%;
+    background: #000000;
+}
+
 .hero-content h1 {
     font-size: 3rem;
+    line-height: 3rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
@@ -723,7 +767,7 @@ body {
 }
 
 .practice-card:hover .practice-content {
-    transform: translateY(calc(-250px));
+    transform: translateY(calc(-45px));
     padding: 2rem;
     max-height: 250px;
     border-radius: 10px 10px 0 0;
@@ -926,7 +970,7 @@ body {
     background: var(--text-dark);
     color: var(--white);
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     margin-top: 4rem;
 }
 
@@ -934,7 +978,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1.5rem;
 }
@@ -944,6 +988,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5rem;
+    width: 75px;
 }
 
 .footer-logo a {

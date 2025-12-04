@@ -16,7 +16,7 @@ const translations = {
         },
         home: {
             heroTitle: 'Dhanurdhara Das Ananda',
-            heroSubtitle: 'Your journey to wellness begins here',
+            heroSubtitle: 'Let\'s dive into Bhakti',
             getStarted: 'Get Started',
             feature1Title: 'Holistic Approach',
             feature1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
@@ -167,7 +167,7 @@ const translations = {
         },
         home: {
             heroTitle: 'Bem-vindo ao Centro de Bem-Estar',
-            heroSubtitle: 'Sua jornada para o bem-estar começa aqui',
+            heroSubtitle: 'Vamos mergulhar em Bhakti',
             getStarted: 'Começar',
             feature1Title: 'Abordagem Holística',
             feature1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
@@ -396,15 +396,24 @@ function smoothScrollTo(target, duration) {
     requestAnimationFrame(animation);
 }
 
+// Prevent browser from restoring scroll position
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Immediately scroll to top on page load to prevent browser hash scrolling
+    window.scrollTo(0, 0);
+    
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Logo element
+    // Logo element and navbar
     const headerLogo = document.getElementById('header-logo');
+    const navbar = document.querySelector('.navbar');
     
     // Function to update logo based on active page
     function updateLogo(activePageId) {
@@ -415,6 +424,19 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // All other tabs - use default logo
                 headerLogo.src = 'img/ddd-logo.png';
+            }
+        }
+    }
+    
+    // Function to update navbar background based on active page
+    function updateNavbarBackground(activePageId) {
+        if (navbar) {
+            if (activePageId === 'home') {
+                // Home tab - add yellow gradient background
+                navbar.classList.add('home-active');
+            } else {
+                // All other tabs - remove yellow gradient background
+                navbar.classList.remove('home-active');
             }
         }
     }
@@ -440,6 +462,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Update logo based on active page
                 updateLogo(targetId);
+                
+                // Update navbar background based on active page
+                updateNavbarBackground(targetId);
                 
                 // Smooth scroll to top with easing
                 window.scrollTo({
@@ -489,7 +514,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (targetPage) {
             targetPage.classList.add('active');
             updateLogo(hash);
+            updateNavbarBackground(hash);
         }
+        
+        // Ensure we're at the top on initial load
+        window.scrollTo(0, 0);
     } else {
         // Default to home page
         navLinks.forEach(l => l.classList.remove('active'));
@@ -497,6 +526,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('a[href="#home"]').classList.add('active');
         document.getElementById('home').classList.add('active');
         updateLogo('home');
+        updateNavbarBackground('home');
+        
+        // Ensure we're at the top on initial load
+        window.scrollTo(0, 0);
     }
 
     // Handle browser back/forward buttons and direct hash navigation
@@ -517,6 +550,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetPage) {
                 targetPage.classList.add('active');
                 updateLogo(hash);
+                updateNavbarBackground(hash);
                 
                 // Smooth scroll to top
                 window.scrollTo({
@@ -531,6 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('a[href="#home"]').classList.add('active');
             document.getElementById('home').classList.add('active');
             updateLogo('home');
+            updateNavbarBackground('home');
         }
     });
 
@@ -678,7 +713,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add scroll effect to navbar
     let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
@@ -757,6 +791,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize language on page load
     updateLanguage(currentLang);
+    
+    // Ensure page stays at top after all resources load
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
 
     // Satguru Carousel functionality
     const satguruCarousel = document.querySelector('.satguru-carousel-container');
