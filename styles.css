@@ -49,6 +49,13 @@ body {
     align-items: center;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+}
+
 .logo img {
     width: 100px;
     height: auto;
@@ -922,6 +929,19 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5rem;
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo a:hover {
+    opacity: 0.8;
 }
 
 .footer-logo img {
