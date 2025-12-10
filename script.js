@@ -166,7 +166,7 @@ const translations = {
             contact: 'Contato'
         },
         home: {
-            heroTitle: 'Bem-vindo ao Centro de Bem-Estar',
+            heroTitle: 'Dhanurdhara Das Ananda',
             heroSubtitle: 'Vamos mergulhar em Bhakti',
             getStarted: 'Começar',
             feature1Title: 'Abordagem Holística',
