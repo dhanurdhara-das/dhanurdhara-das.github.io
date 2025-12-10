@@ -68,7 +68,7 @@ const translations = {
             meetHim: 'Meet Him'
         },
         practices: {
-            title: 'Our Practices',
+            title: 'Practices',
             practice1Title: 'Atma Kriya Yoga',
             practice1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice2Title: 'Babaji Surya Namaskar',
@@ -219,7 +219,7 @@ const translations = {
             meetHim: 'O Encontre'
         },
         practices: {
-            title: 'Nossas Práticas',
+            title: 'Práticas',
             practice1Title: 'Atma Kriya Yoga',
             practice1Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ut est eu ullamcorper. Proin semper est diam. Suspendisse laoreet tincidunt sapien. Donec porttitor ultrices risus quis ornare',
             practice2Title: 'Babaji Surya Namaskar',
@@ -963,6 +963,147 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateCarousel();
             }
         }
+    }
+});
+
+// Bio thumbnail image swap functionality with auto-rotation
+document.addEventListener('DOMContentLoaded', function() {
+    const bioMainImage = document.getElementById('bio-main-image');
+    const bioThumbnails = document.querySelectorAll('.bio-thumbnail');
+    const bioPage = document.getElementById('bio');
+    let autoRotateInterval = null;
+    let currentImageIndex = 0;
+    
+    // All images in rotation order: ddd.jpg (main, no thumbnail) + 4 thumbnails
+    const allImages = [
+        'img/ddd.jpg',                    // Index 0 - main image, no thumbnail
+        'img/guruji-ddd-2.jpg',          // Index 1 - thumbnail 0
+        'img/guruji-ddd.jpg',            // Index 2 - thumbnail 1
+        'img/guruji-ddd-1.jpeg',         // Index 3 - thumbnail 2
+        'img/guruji-ddd-2019-initiation.jpg' // Index 4 - thumbnail 3
+    ];
+    
+    // Map image paths to thumbnail indices (0 = no thumbnail for ddd.jpg)
+    const imageToThumbnailIndex = {
+        'img/ddd.jpg': -1,  // No thumbnail
+        'img/guruji-ddd-2.jpg': 0,
+        'img/guruji-ddd.jpg': 1,
+        'img/guruji-ddd-1.jpeg': 2,
+        'img/guruji-ddd-2019-initiation.jpg': 3
+    };
+    
+    if (bioMainImage && bioThumbnails.length > 0) {
+        // Function to switch to a specific image by index with fade transition
+        function switchToImage(index) {
+            if (index >= 0 && index < allImages.length) {
+                const imageSrc = allImages[index];
+                const thumbnailIndex = imageToThumbnailIndex[imageSrc];
+                
+                // Fade out
+                bioMainImage.classList.add('fading');
+                
+                // After fade out, change image and fade in
+                setTimeout(function() {
+                    bioMainImage.src = imageSrc;
+                    
+                    // Update active state for thumbnails
+                    bioThumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    if (thumbnailIndex >= 0 && thumbnailIndex < bioThumbnails.length) {
+                        bioThumbnails[thumbnailIndex].classList.add('active');
+                    }
+                    
+                    // Fade in
+                    bioMainImage.classList.remove('fading');
+                    
+                    currentImageIndex = index;
+                }, 250); // Half of the transition duration (0.5s / 2)
+            }
+        }
+        
+        // Function to rotate to next image
+        function rotateToNext() {
+            currentImageIndex = (currentImageIndex + 1) % allImages.length;
+            switchToImage(currentImageIndex);
+        }
+        
+        // Function to start auto-rotation
+        function startAutoRotate() {
+            // Clear any existing interval
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            // Find current image index based on main image src
+            const currentSrc = bioMainImage.src;
+            allImages.forEach((img, index) => {
+                if (currentSrc.includes(img.split('/').pop())) {
+                    currentImageIndex = index;
+                }
+            });
+            
+            // Start rotating every 3 seconds
+            autoRotateInterval = setInterval(rotateToNext, 3000);
+        }
+        
+        // Function to stop auto-rotation
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        // Watch for bio page activation/deactivation
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'class') {
+                    const isActive = bioPage.classList.contains('active');
+                    if (isActive) {
+                        // Bio page is now active, start auto-rotation
+                        startAutoRotate();
+                    } else {
+                        // Bio page is no longer active, stop auto-rotation
+                        stopAutoRotate();
+                    }
+                }
+            });
+        });
+        
+        // Start observing the bio page for class changes
+        if (bioPage) {
+            observer.observe(bioPage, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            
+            // Check initial state
+            if (bioPage.classList.contains('active')) {
+                startAutoRotate();
+            }
+        }
+        
+        // Handle manual thumbnail clicks
+        bioThumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function() {
+                // Stop current rotation
+                stopAutoRotate();
+                
+                // Find the image index for this thumbnail
+                const thumbnailSrc = thumbnail.getAttribute('data-full-image');
+                const imageIndex = allImages.indexOf(thumbnailSrc);
+                
+                if (imageIndex >= 0) {
+                    switchToImage(imageIndex);
+                }
+                
+                // Restart auto-rotation after 3 seconds
+                setTimeout(function() {
+                    if (bioPage && bioPage.classList.contains('active')) {
+                        startAutoRotate();
+                    }
+                }, 3000);
+            });
+        });
     }
 });
 
