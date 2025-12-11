@@ -65,7 +65,8 @@ const translations = {
             text1: 'Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with a formative encounter with Mahavatar Babaji in childhood—a relationship he describes as the guiding thread of his mission.',
             text2: 'After traveling and giving darshan in Europe in the late 1990s, he formally established Bhakti Marga on 13 June 2005. The movement\'s international headquarters is Shree Peetha Nilaya in Heidenrod (Taunus), Germany, from which he teaches a path of devotion (bhakti), including practices such as Atma Kriya Yoga.',
             text3: 'In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.',
-            meetHim: 'Meet Him'
+            meetHim: 'Meet Him',
+            spotifyHeading: 'Keep Him always in Our Minds'
         },
         practices: {
             title: 'Practices',
@@ -216,7 +217,8 @@ const translations = {
             text1: 'Paramahamsa Sri Swami Vishwananda (nascido em 13 de junho de 1978, em Beau Bassin–Rose Hill, Maurício) é um mestre espiritual hindu nascido no Maurício e fundador da Bhakti Marga. Sua organização apresenta sua infância como profundamente devocional, marcada por um encontro formativo com Mahavatar Babaji — relação que ele descreve como o fio condutor de sua missão.',
             text2: 'Após viajar e oferecer darshan na Europa no fim dos anos 1990, ele fundou oficialmente a Bhakti Marga em 13 de junho de 2005. A sede internacional do movimento é Shree Peetha Nilaya, em Heidenrod (Taunus), Alemanha, de onde ele ensina um caminho de devoção (bhakti), incluindo práticas como Atma Kriya Yoga.',
             text3: 'Nos últimos anos, ele apresentou a Hari Bhakta Sampradaya, dentro da qual a Bhakti Marga opera, e a missão tem se expandido, passando a incluir templos e centros no mundo todo.',
-            meetHim: 'O Encontre'
+            meetHim: 'O Encontre',
+            spotifyHeading: 'Sempre tenha Ele em mente'
         },
         practices: {
             title: 'Práticas',
@@ -418,7 +420,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update logo based on active page
     function updateLogo(activePageId) {
         if (headerLogo) {
-            if (activePageId === 'about') {
+            if (activePageId === 'satguru') {
+                // Satguru tab - use gold logo
+                headerLogo.src = 'img/ddd-gold-logo.png';
+            } else if (activePageId === 'about') {
                 // Bhakti Marga tab - use blue logo
                 headerLogo.src = 'img/ddd-blue-logo.png';
             } else {
