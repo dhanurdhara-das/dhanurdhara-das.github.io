@@ -424,13 +424,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (headerLogo) {
             if (activePageId === 'satguru') {
                 // Satguru tab - use gold logo
-                headerLogo.src = 'img/ddd-gold-logo.png';
+                headerLogo.src = 'img/ddd-gold-logo-new.png';
             } else if (activePageId === 'about') {
                 // Bhakti Marga tab - use blue logo
-                headerLogo.src = 'img/ddd-blue-logo.png';
+                headerLogo.src = 'img/ddd-blue-logo-new.png';
             } else {
                 // All other tabs - use default logo
-                headerLogo.src = 'img/ddd-logo.png';
+                headerLogo.src = 'img/ddd-logo-new.png';
             }
         }
     }
