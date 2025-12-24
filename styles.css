@@ -402,7 +402,7 @@ body {
 }
 
 .feature-card {
-    background: var(--white);
+    background: #f7efc5;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
@@ -418,11 +418,29 @@ body {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
 }
 
 .feature-card h3 {
     margin-bottom: 1rem;
     color: var(--primary-color);
+}
+
+.feature-source {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    opacity: 0.8;
 }
 
 /* About Page - Bhakti Marga Theme Color */
