@@ -106,7 +106,7 @@ const translations = {
         },
         privacy: {
             title: 'Privacy Policy',
-            lastUpdated: 'Last updated: 2025',
+            lastUpdated: 'Last updated: 2026',
             intro: 'This website is a personal project operated by <strong>Dhanurdhara Das Ananda (Guilherme da Silva)</strong>. Only minimal data is collected, and only for responding to messages submitted through the contact form.',
             section1Title: '1. Data collected through the contact form',
             section1Intro: 'When you send a message, the following information is collected:',
@@ -259,7 +259,7 @@ const translations = {
         },
         privacy: {
             title: 'Política de Privacidade',
-            lastUpdated: 'Última atualização: 2025',
+            lastUpdated: 'Última atualização: 2026',
             intro: 'Este site é um projeto pessoal operado por <strong>Dhanurdhara Das Ananda (Guilherme da Silva)</strong>. Coletamos apenas os dados mínimos necessários para responder às mensagens enviadas através do formulário de contato.',
             section1Title: '1. Dados coletados pelo formulário',
             section1Intro: 'Quando você envia uma mensagem, são coletadas as seguintes informações:',
@@ -368,8 +368,12 @@ function updateLanguage(lang) {
         if (selectedOption) {
             const flag = selectedOption.querySelector('.flag').textContent;
             const langName = selectedOption.querySelector('.lang-name').textContent;
+            const langNameMobile = selectedOption.querySelector('.lang-name-mobile');
             selectedDisplay.querySelector('.flag').textContent = flag;
             selectedDisplay.querySelector('.lang-name').textContent = langName;
+            if (langNameMobile && selectedDisplay.querySelector('.lang-name-mobile')) {
+                selectedDisplay.querySelector('.lang-name-mobile').textContent = langNameMobile.textContent;
+            }
         }
     }
 }
