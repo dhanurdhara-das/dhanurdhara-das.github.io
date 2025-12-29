@@ -24,8 +24,8 @@ const translations = {
             feature2Title: 'Natural Methods',
             feature2Text: 'Bhakti is an exclusive flow of loving consciousness toward Bhagavān that results in a deep feeling of belonging, is expressed as sevā, and puts an end to all suffering.',
             feature2Source: 'Paramahamsa Vishwananda',
-            feature3Title: 'Expert Care',
-            feature3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.'
+            feature3Text: 'Of all forms of worship of the Lord, love is the highest.',
+            feature3Source: 'Saint Surdas'
         },
         about: {
             title: 'Bhakti Marga',
@@ -179,8 +179,8 @@ const translations = {
             feature2Title: 'Métodos Naturais',
             feature2Text: 'Bhakti é um fluxo exclusivo de consciência amorosa em direção a Bhagavān que resulta em um profundo sentimento de pertencimento, se expressa como sevā e põe fim a todo o sofrimento.',
             feature2Source: 'Paramahamsa Vishwananda',
-            feature3Title: 'Cuidado Especializado',
-            feature3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.'
+            feature3Text: 'De todas as formas de adoração ao Senhor, o amor é o mais elevado.',
+            feature3Source: 'Saint Surdas'
         },
         about: {
             title: 'Bhakti Marga',
