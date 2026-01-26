@@ -30,7 +30,7 @@ const translations = {
         about: {
             title: 'Bhakti Marga',
             storyTitle: 'Our Story',
-            story1: 'Bhakti Marga began in 2005 as a small devotional community dedicated to cultivating a life rooted in love, service, and spiritual practice. Over the years it has grown into a global movement with centres, temples, and ashrams across Europe, the Americas, Africa, and Asia. Its international headquarters, Shree Peetha Nilaya in Germany, serves as the main ashram and training hub. Additional temples and ashrams operate in countries such as Portugal, the UK, France, South Africa, Mauritius, India, the USA, and Brazil, each offering regular community gatherings and devotional programs.\n\nThe path is grounded in bhakti, the practice of directing the heart toward the Divine through meditation, chanting, prayer, puja, and selfless service. Bhakti Marga places a strong emphasis on lived spirituality: developing devotion, cultivating inner transformation, and building supportive communities that help individuals bring spiritual principles into daily life.\n\nActivities include courses on meditation and yoga, deity worship, satsangs, music programs, retreats, seva initiatives, pilgrimages, and large international events such as kirtan festivals and sacred celebrations. Many country groups also maintain local temples or puja halls where regular prayers and rituals are offered.\n\nToday Bhakti Marga is active in more than 40 countries, supported by hundreds of volunteers and practitioners who help maintain temples, organise events, and share the teachings. Its aim remains simple: to guide people toward a loving, personal relationship with the Divine and to support a devotional way of living in modern society.',
+            story1: 'Bhakti Marga began in 2005 as a small devotional community dedicated to cultivating a life rooted in love, service, and spiritual practice. Over the years it has grown into a global movement with centres, temples, and ashrams across Europe, the Americas, Africa, and Asia, each offering regular community gatherings and devotional programs. Its international headquarters, Shree Peetha Nilaya in Germany, serves as the main ashram and training hub.\n\nThe path is grounded in bhakti, the practice of directing the heart toward the Divine through meditation, chanting, prayer, puja, and selfless service. Bhakti Marga places a strong emphasis on lived spirituality: developing devotion, cultivating inner transformation, and building supportive communities that help individuals bring spiritual principles into daily life.\n\nActivities include courses on meditation and yoga, deity worship, satsangs, music programs, retreats, seva initiatives, pilgrimages, and large international events such as kirtan festivals and sacred celebrations. Many country groups also maintain local temples or puja halls where regular prayers and rituals are offered.\n\nToday Bhakti Marga is active in more than 40 countries, supported by hundreds of volunteers and practitioners who help maintain temples, organise events, and share the teachings. Its aim remains simple: to guide people toward a loving, personal relationship with the Divine and to support a devotional way of living in modern society.',
             story2: '',
             story3: '',
             valuesTitle: '4 Arms',
@@ -48,25 +48,20 @@ const translations = {
         bio: {
             title: 'Bio',
             name: 'Dhanurdhara Das Ananda',
-            titleText: 'Teacher of Spiritual Knowledge, Rituals & Atma Kriya Yoga',
-            text1: 'Born in July 1994, Dhanurdhara Das Ananda grew up in a religious family, yet he never considered himself a religious person. As a young man, after achieving many of the things he desired, he began to feel an inner emptiness he couldn\'t explain or fill.',
-            text2: 'With his long-standing interest in history, politics, and philosophy, he turned his attention toward self-knowledge, God, and the depth of Hindu culture.',
+            titleText: 'Teacher of Spiritual Knowledge, Rituals and Yoga&Meditation',
+            text1: 'Born in July 1994, Dhanurdhara Das Ananda grew up in a religious family, yet he never considered himself a religious person. As a young man, after experiencing many of the things he desired, he began to feel an inner emptiness he couldn\'t explain or fill.',
+            text2: 'Due to his upbringing and also realizing that the knowledge acquired from reading history, politics, and philosophy books, which until then were topics he greatly enjoyed, did not fill this void, he concluded that this feeling could be resolved through self-knowledge and spirituality—a path that led him to Hindu culture.',
             text3: 'In January 2017, he met Paramahamsa Vishwananda in São Paulo, where he experienced something profound and transformative — an encounter he later understood as a call from his soul to his Satguru.',
-            text4: 'In Florianópolis, where he lived, Paramahamsa Vishwananda inaugurated a temple located just ten minutes from his home, which Dhanurdhara began to attend regularly. A year later, he traveled to Germany to Shree Peetha Nilaya, where he dedicated himself to seva (selfless service) and a deeper study of Bhakti Marga and Hinduism.',
-            educationTitle: 'Education & Certifications',
-            education1: 'Training in Bhakti Yoga and Vedic Philosophy, Bhakti Marga Academy',
-            education2: 'Certified Atma Kriya Yoga Teacher',
-            education3: 'Training in Vedic Rituals and Spiritual Ceremonies',
-            education4: 'Ongoing studies under the guidance of Paramahamsa Vishwananda',
+            text4: 'In Florianópolis, the city where he was studying, Paramahamsa Vishwananda inaugurated a temple just ten minutes from his home, and Dhanurdhara Das began to attend it regularly. A year later, he traveled to Germany, to the Shree Peetha Nilaya ashram, where he dedicated himself to seva (devotional service) and a deeper understanding of Bhakti Marga and Hinduism. Where he resides there ever since.',
             experienceTitle: 'Experience',
             experienceText: 'With over seven years dedicated to the Bhakti path, Dhanurdhara Das Ananda serves as a teacher and facilitator of spiritual practices, offering classes and talks on Vedic knowledge, rituals, and Atma Kriya Yoga. His work inspires spiritual seekers to cultivate a deeper relationship with the Divine, integrating ancient wisdom with daily devotion and self-discovery.'
         },
         satguru: {
             title: 'Satguru',
             subtitle: 'Paramahamsa Vishwananda',
-            text1: 'Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with a formative encounter with Mahavatar Babaji in childhood—a relationship he describes as the guiding thread of his mission.',
+            text1: 'Paramahamsa Sri Swami Vishwananda (born 13 June 1978 in Beau Bassin–Rose Hill, Mauritius) is a Mauritian-born Hindu spiritual teacher and the founder of Bhakti Marga. His early life is presented by his organisation as steeped in devotion, with an encounter with his guru, Mahavatar Babaji.',
             text2: 'After traveling and giving darshan in Europe in the late 1990s, he formally established Bhakti Marga on 13 June 2005. The movement\'s international headquarters is Shree Peetha Nilaya in Heidenrod (Taunus), Germany, from which he teaches a path of devotion (bhakti), including practices such as Atma Kriya Yoga.',
-            text3: 'In recent years, he articulated the Hari Bhakta Sampradaya within which Bhakti Marga operates, and the mission has grown to include temples and centers worldwide.',
+            text3: 'In recent years, he created the Hari Bhakta Sampradaya, which is a Vaishnava lineage centered around Sri Hari and Guru, and it is only through devotion that we can reach Them.<br><br>Paramahamsa Vishwananda incorporated a new philosophy into the Hari Bhakta Sampradaya, called Tadadmya Vedanta, which explains the relationship between God, the material world, and the soul, the qualities of each, and much more.<br><br>To know more about Hari Bhakta Sampradaya and Tadadmya Vedanta <a href="#contact">click here</a>',
             meetHim: 'Meet Him',
             spotifyHeading: 'Keep Him always in Our Minds'
         },
@@ -185,7 +180,7 @@ const translations = {
         about: {
             title: 'Bhakti Marga',
             storyTitle: 'Nossa História',
-            story1: 'Bhakti Marga começou em 2005 como uma pequena comunidade devocional dedicada a cultivar uma vida baseada no amor, no serviço e na prática espiritual. Com o tempo, tornou-se um movimento global com centros, templos e ashrams distribuídos pela Europa, Américas, África e Ásia. Sua sede internacional, Shree Peetha Nilaya, na Alemanha, funciona como o principal ashram e centro de formação. Outros templos e ashrams estão ativos em países como Portugal, Reino Unido, França, África do Sul, Maurício, Índia, Estados Unidos e Brasil, cada um oferecendo encontros comunitários e programas devocionais regulares.\n\nO caminho se fundamenta no bhakti, a prática de direcionar o coração ao Divino por meio de meditação, canto, oração, puja e serviço altruísta. Bhakti Marga valoriza uma espiritualidade vivida: desenvolver devoção, promover transformação interior e sustentar comunidades que ajudam cada pessoa a aplicar princípios espirituais no dia a dia.\n\nAs atividades incluem cursos de meditação e yoga, adoração às deidades, satsangs, programas musicais, retiros, iniciativas de seva, peregrinações e grandes eventos internacionais como festivais de kirtan e celebrações sagradas. Muitos grupos locais também mantêm templos ou salas de puja com orações e rituais regulares.\n\nHoje, Bhakti Marga está presente em mais de 40 países, sustentada por centenas de voluntários e praticantes que mantêm templos, organizam eventos e compartilham os ensinamentos. Seu propósito permanece simples: apoiar cada pessoa a desenvolver uma relação amorosa e pessoal com o Divino e viver a devoção na sociedade contemporânea.',
+            story1: 'Bhakti Marga começou em 2005 como uma pequena comunidade devocional dedicada a cultivar uma vida baseada no amor, no serviço e na prática espiritual. Com o tempo, tornou-se um movimento global com centros, templos e ashrams distribuídos pela Europa, Américas, África e Ásia. Sua sede internacional, Shree Peetha Nilaya, na Alemanha, funciona como o principal ashram e centro de formação, oferecendo encontros comunitários e programas devocionais regulares.\n\nO caminho se fundamenta no bhakti, a prática de direcionar o coração ao Divino por meio de meditação, canto, oração, puja e serviço altruísta. Bhakti Marga valoriza uma espiritualidade vivida: desenvolver devoção, promover transformação interior e sustentar comunidades que ajudam cada pessoa a aplicar princípios espirituais no dia a dia.\n\nAs atividades incluem cursos de meditação e yoga, adoração às deidades, satsangs, programas musicais, retiros, iniciativas de seva, peregrinações e grandes eventos internacionais como festivais de kirtan e celebrações sagradas. Muitos grupos locais também mantêm templos ou salas de puja com orações e rituais regulares.\n\nHoje, Bhakti Marga está presente em mais de 40 países, sustentada por centenas de voluntários e praticantes que mantêm templos, organizam eventos e compartilham os ensinamentos. Seu propósito permanece simples: apoiar cada pessoa a desenvolver uma relação amorosa e pessoal com o Divino e viver a devoção na sociedade contemporânea.',
             story2: '',
             story3: '',
             valuesTitle: '4 Braços',
@@ -203,25 +198,20 @@ const translations = {
         bio: {
             title: 'Biografia',
             name: 'Dhanurdhara Das Ananda',
-            titleText: 'Professor de Conhecimento Espiritual, Rituais & Atma Kriya Yoga',
-            text1: 'Nascido em julho de 1994, Dhanurdhara Das Ananda cresceu em uma família religiosa, mas nunca se considerou uma pessoa religiosa. Ainda jovem, após conquistar o que desejava materialmente, começou a sentir um vazio interior que não sabia como preencher.',
-            text2: 'Movido por um interesse crescente por história, política e filosofia, iniciou uma busca mais profunda por autoconhecimento, espiritualidade e pela compreensão de Deus — caminho que o levou à cultura hindu.',
+            titleText: 'Professor de Conhecimento Espiritual, Rituais e Yoga&Meditação',
+            text1: 'Nascido em julho de 1994, Dhanurdhara Das Ananda cresceu em uma família religiosa, mas nunca se considerou uma pessoa religiosa. Ainda jovem, após experenciar muita das coisas que desejava, começou a sentir um vazio interior que não sabia como preencher.',
+            text2: 'Devido sua criação e também percebendo que o conhecimento adquirido lendo livros de história, política e filosofia, que até então eram tópicos que gostava muito, não preenchia esse vazio, concluindo então que este sentimento poderia ser resolvido através do autoconhecimento, espiritualidade — caminho que o levou à cultura hindu.',
             text3: 'Em janeiro de 2017, conheceu Paramahamsa Vishwananda em São Paulo. Durante esse encontro, viveu uma experiência profunda e transformadora, que mais tarde reconheceu como um chamado da alma ao seu Satguru.',
-            text4: 'Em Florianópolis, cidade onde residia, Paramahamsa Vishwananda inaugurou um templo a apenas dez minutos de sua casa, e Dhanurdhara passou a frequentá-lo regularmente. Um ano depois, viajou à Alemanha, ao ashram Shree Peetha Nilaya, onde se dedicou ao seva (serviço devocional) e ao aprendizado mais profundo sobre Bhakti Marga e o Hinduísmo.',
-            educationTitle: 'Educação e Certificações',
-            education1: 'Formação em Bhakti Yoga e Filosofia Védica, Bhakti Marga Academy',
-            education2: 'Instrutor Certificado de Atma Kriya Yoga',
-            education3: 'Formação em Rituais Védicos e Cerimônias Espirituais',
-            education4: 'Estudos contínuos sob a orientação de Paramahamsa Vishwananda',
+            text4: 'Em Florianópolis, cidade onde fazia faculdade, Paramahamsa Vishwananda inaugurou um templo a apenas dez minutos de sua casa, e Dhanurdhara Das passou a frequentá-lo regularmente. Um ano depois, viajou à Alemanha, ao ashram Shree Peetha Nilaya, onde se dedicou ao seva (serviço devocional) e ao aprendizado mais profundo sobre Bhakti Marga e o Hinduísmo. Onde reside até então',
             experienceTitle: 'Experiência',
             experienceText: 'Com mais de sete anos dedicados ao caminho do Bhakti, Dhanurdhara Das Ananda atua como professor e facilitador de práticas espirituais, conduzindo aulas e palestras sobre conhecimento védico, rituais e Atma Kriya Yoga. Seu trabalho inspira buscadores espirituais a desenvolver uma relação mais profunda com o Divino, unindo sabedoria ancestral e prática devocional no cotidiano.'
         },
         satguru: {
             title: 'Satguru',
             subtitle: 'Paramahamsa Vishwananda',
-            text1: 'Paramahamsa Sri Swami Vishwananda (nascido em 13 de junho de 1978, em Beau Bassin–Rose Hill, Maurício) é um mestre espiritual hindu nascido no Maurício e fundador da Bhakti Marga. Sua organização apresenta sua infância como profundamente devocional, marcada por um encontro formativo com Mahavatar Babaji — relação que ele descreve como o fio condutor de sua missão.',
+            text1: 'Paramahamsa Sri Swami Vishwananda (nascido em 13 de junho de 1978, em Beau Bassin–Rose Hill, Maurício) é um mestre espiritual hindu nascido no Maurício e fundador da Bhakti Marga. Sua organização apresenta sua infância como profundamente devocional, marcada por um encontro com seu guru, Mahavatar Babaji.',
             text2: 'Após viajar e oferecer darshan na Europa no fim dos anos 1990, ele fundou oficialmente a Bhakti Marga em 13 de junho de 2005. A sede internacional do movimento é Shree Peetha Nilaya, em Heidenrod (Taunus), Alemanha, de onde ele ensina um caminho de devoção (bhakti), incluindo práticas como Atma Kriya Yoga.',
-            text3: 'Nos últimos anos, ele apresentou a Hari Bhakta Sampradaya, dentro da qual a Bhakti Marga opera, e a missão tem se expandido, passando a incluir templos e centros no mundo todo.',
+            text3: 'Nos últimos anos, ele criou o Hari Bhakta Sampradaya, que é uma linhagem Vaishnava centrada ao redor de Sri Hari e Guru, sendo somente através da devoção, que podemos alcançá-Los.<br><br>Paramahamsa Vishwananda incorporou ao Hari Bhakta Sampradaya uma nova filosofia, chamada de Tadadmya Vedanta, que explica sobre a relação entre Deus, mundo material e a alma, as qualidades de cada um e muito mais.<br><br>Para saber mais sobre Hari Bhakta Sampradaya e Tadadmya Vedanta <a href="#contact">clique aqui</a>',
             meetHim: 'O Encontre',
             spotifyHeading: 'Sempre tenha Ele em mente'
         },
@@ -368,7 +358,7 @@ function updateLanguage(lang) {
     const dropdown = document.getElementById('language-dropdown');
     const selectedDisplay = document.getElementById('dropdown-selected');
     if (dropdown && selectedDisplay) {
-        const selectedOption = dropdown.querySelector(`[data-lang="${lang}"]`);
+        const selectedOption = dropdown.querySelector(`.dropdown-option[data-lang="${lang}"]`);
         if (selectedOption) {
             const flag = selectedOption.querySelector('.flag').textContent;
             const langName = selectedOption.querySelector('.lang-name').textContent;
