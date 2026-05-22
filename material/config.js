@@ -42,7 +42,8 @@ const MATERIAL_CONFIG = {
     "b96e7e8a1789be90c64e83bcfbe95b2de352c6b20199993af4210eb37f669cc3": {
         title: "Atma Kriya Yoga - Practitioner Manual",
         files: [
-            { name: "AKY Practitioner Manual 2022.pdf", path: "files/aky/en-AKY-Practitioner-Manual-2022-Print-05-08.pdf" },
+            { name: "AKY Practitioner Manual 2022 (EN).pdf", path: "files/aky/en-AKY-Practitioner-Manual-2022-Print-05-08.pdf" },
+            { name: "AKY Manual 2024 (PT).pdf", path: "files/aky/aky-manual-pt-2024.pdf" },
         ]
     },
 
