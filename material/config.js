@@ -46,6 +46,14 @@ const MATERIAL_CONFIG = {
         ]
     },
 
+    // Password: "gita_yajna" → Folder: files/gita/
+    "abe19ef0e08f11c6dc5529cb542165a78f0933e4c913c2cb15db33dbce002970": {
+        title: "Bhagavad Gita Yagna",
+        files: [
+            { name: "BG Yagna.pdf", path: "files/gita/BG yagna.pdf" },
+        ]
+    },
+
     // To add more courses, follow the steps above and add entries here.
     // Example:
     // "hash_of_another_password": {
